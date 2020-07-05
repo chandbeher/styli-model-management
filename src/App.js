@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import Navigation from "./Components/Navigation/Navigation";
+import { Switch, Route } from 'react-router-dom';
+import Models from './Containers/Models/Models';
+import AddModel from './Components/AddModel/AddModel';
+import Toolbar from './Components/Toolbar/Toolbar';
+import Container from '@material-ui/core/Container';
 
-function App() {
-  return (
-    <div className="App">
-      <Navigation />
-    </div>
-  );
+class App extends Component {
+  
+  render (){
+      return (
+        <div className="App">
+          <Container maxWidth="lg">
+            <Toolbar/>
+            <Switch>
+                  <Route path="/build" exact component={AddModel} />
+                  <Route path="/" exact component={ Models } />
+              </Switch>
+           </Container>
+        </div>
+      );
+  }
 }
 
 export default App;

@@ -1,0 +1,6 @@
+export const LOAD_MODELS = 'LOAD_MODELS';
+export const ADD_MODEL = 'ADD_MODEL';
+export const DELETE_MODEL = 'DELETE_MODEL';
+export const UPDATE_MODEL = 'UPDATE_MODEL';
+export const SEARCH_MODEL = 'SEARCH_MODEL';
+export const LOAD_SEARCH_RESULTS = 'LOAD_SEARCH_RESULTS';
