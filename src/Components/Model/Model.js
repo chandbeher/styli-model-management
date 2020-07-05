@@ -15,9 +15,7 @@ const model = props => {
             <Grid container spacing={1}>
                 <Grid item xs={12} sm={4}>
                     <Box bgcolor="text.disabled" color="background.paper" p={2}>
-                    <span style={{'text-align': 'left'}}>
                         MODEL WEAR: {gender}
-                        </span>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={4}>

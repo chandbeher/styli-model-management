@@ -11,6 +11,7 @@ import ModelFilter from '../../Components/ModelFilter/ModelFilter';
 import AddIcon from '@material-ui/icons/Add';
 import SearchIcon from '@material-ui/icons/Search';
 import EditModel from '../../Components/EditModel/EditModel';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 class Models extends Component{
 
@@ -119,6 +120,7 @@ class Models extends Component{
                     closeDrawer = {this.toggleDrawer} />
                 {modelList}
                 {editModal}
+                <CircularProgress />
             </div>
         );
     }
