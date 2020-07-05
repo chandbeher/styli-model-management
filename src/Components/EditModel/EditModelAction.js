@@ -33,7 +33,7 @@ const EditModelAction = (prop) => {
                         .required("Gender Required"),
                 })}
                 onSubmit = { (model, {setSubmiting, resetForm}) =>{
-                    axios.post('http://localhost:4000/model/update/' + prop.model._id, model)
+                    axios.post('http://18.220.137.225:4000/model/update/' + prop.model._id, model)
                         .then(res => {
                             prop.updateModel(res.data);
                             prop.closeDrawer();

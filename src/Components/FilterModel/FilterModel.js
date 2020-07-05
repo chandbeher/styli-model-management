@@ -23,7 +23,7 @@ const FilterModel = (prop) => {
                     lowHip: 0
                 }}
                 onSubmit = { (model, {setSubmiting, resetForm}) =>{
-                    axios.post('http://localhost:4000/model/search', model)
+                    axios.post('http://18.220.137.225:4000/model/search', model)
                         .then(res => {
                             console.log(res.data);
                             prop.loadSearchResult(res.data);

@@ -39,7 +39,7 @@ class Models extends Component{
         });
     }
     componentDidMount(){
-        axios.get('http://localhost:4000/model')
+        axios.get('http://18.220.137.225:4000/model')
             .then(res => {
                 this.props.loadModels(res.data);
                 this.updateErrorMessage(null);
@@ -101,9 +101,11 @@ class Models extends Component{
         const floatingActionItems =
             <div className="ActionItems">
                 <Tooltip title="Add Model" aria-label="add">
-                    <Fab color="primary" aria-label="add" href = "/build">
-                    <AddIcon />
-                    </Fab>
+                    <NavLink to="/build">
+                        <Fab color="primary" aria-label="add">
+                        <AddIcon />
+                        </Fab>
+                    </NavLink>
                 </Tooltip><br/><span/>
                 <Tooltip title="Filter Models" aria-label="add">
                     <Fab color="primary" aria-label="add" onClick= {this.toggleDrawer}>

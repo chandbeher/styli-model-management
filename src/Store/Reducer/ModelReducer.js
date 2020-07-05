@@ -6,7 +6,7 @@ const modelState = {
 }
 
 const deleteModel = (state, action) => {
-    axios.delete('http://localhost:4000/model/' + action.modelId)
+    axios.delete('http://18.220.137.225:4000/model/' + action.modelId)
         .then(res => {
         });
     const restOfModels =  state.models.filter(model => model._id !== action.modelId);
