@@ -9,7 +9,8 @@ const deleteModel = (state, action) => {
     axios.delete('http://localhost:4000/model/' + action.modelId)
         .then(res => {
         });
-    return state.models.filter(model => model._id !== action.modelId);
+    const restOfModels =  state.models.filter(model => model._id !== action.modelId);
+    return {models: restOfModels};
 };
 
 const loadSearchResults = (state, action) => {
